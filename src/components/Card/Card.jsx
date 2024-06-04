@@ -5,8 +5,9 @@ export default function Card(props) {
 
   return (
     <div className='card'>
-      <h1>{props.nome}</h1>
-      <img src={props.imagem} width={200} alt="Imagem do Devmon Java" />
+      <h2>{props.item.nome}</h2>
+      {props.item.evoluiPara && <p><b>Evolui para:</b> {props.item.evoluiPara}</p>}
+      <img src={props.item.imagem} width={200} alt="Imagens dos Devmons" />
     </div>
   )
 }
